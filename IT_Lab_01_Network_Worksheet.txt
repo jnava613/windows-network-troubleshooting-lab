@@ -17,7 +17,7 @@ IPv4 address: displayed [IMAGE, exact address withheld for privacy]
 Subnet mask: 255.255.252.0 (/22) [IMAGE]
 Default gateway: displayed [IMAGE, exact address withheld]
 Result: Configuration present. This alone does not prove connectivity.
-Evidence: screenshots/01_wifi_configuration_redacted.png
+Evidence: 01_wifi_configuration_redacted.png
 
 02 — DHCP AND DNS CONFIGURATION [REPORTED]
 Command: ipconfig /all
@@ -37,21 +37,21 @@ Command: ping [configured IPv4 default gateway]
 Packets: 4 sent, 4 received, 0 lost (0%)
 Round-trip time: minimum 3 ms, maximum 4 ms, average 3 ms
 Result: The configured local gateway responded to ICMP pings.
-Evidence: screenshots/02_gateway_ping.png
+Evidence: 02_gateway_ping.png
 
 05 — EXTERNAL IP REACHABILITY [IMAGE]
 Command: ping 1.1.1.1
 Packets: 4 sent, 4 received, 0 lost (0%)
 Round-trip time: minimum 8 ms, maximum 9 ms, average 8 ms
 Result: Successful external ICMP IP reachability without DNS being needed.
-Evidence: screenshots/03_external_ping.png
+Evidence: 03_external_ping.png
 
 06 — DNS NAME RESOLUTION [IMAGE]
 Command: nslookup example.com
 Result: Non-authoritative response returned IPv4 and IPv6 addresses for example.com.
 DNS server was identified in the command output; specific server address omitted here.
 Meaning: Successful resolution of the tested hostname at the time of testing.
-Evidence: screenshots/04_dns_lookup.png
+Evidence: 04_dns_lookup.png
 
 07 — REMOTE TCP PORT CONNECTIVITY [IMAGE]
 Command: Test-NetConnection example.com -Port 443
@@ -60,7 +60,7 @@ Remote port: 443
 TcpTestSucceeded: True
 Result: TCP connection to port 443 succeeded. This does NOT verify a full HTTPS request,
 certificate trust, actual webpage contents, or browsing experience.
-Evidence: screenshots/05_tcp_port_443_redacted.png
+Evidence: 05_tcp_port_443_redacted.png
 
 FINAL CONCLUSION
 All seven required lab checks passed. IP configuration was present; local IPv4
